@@ -161,7 +161,7 @@ body:has(.commit:hover)::before {
 }
 
 .commit .tags {
-    margin: 0 0 1rem 1rem;
+    margin: 2rem 0 2rem 1rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -172,8 +172,8 @@ body:has(.commit:hover)::before {
 }
 
 .commit .tag {
-    display: inline-block;
     font-weight: bold;
+    display: inline-block;
     background-color: var(--surface-3);
     min-width: 5rem;
     min-height: 3rem;
