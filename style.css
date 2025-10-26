@@ -164,6 +164,17 @@ body:has(.commit:hover)::before {
     margin: 0 0 1rem 1rem;
 }
 
+.commit li {
+    margin: 0.5rem 0;
+}
+
+.invert {
+    color: var(--surface-2);
+    background-color: var(--text);
+    padding: 0.1em 0.5em;
+    border-radius: 5px;
+}
+
 .commit .tags {
     margin: 2rem 0 2rem 1rem;
     display: flex;
