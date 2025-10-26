@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>~jurka_jan</title>
+
+        <script>
+            document.addEventListener("mousemove", (e) => {
+                document.body.style.setProperty("--mouse-x", `${e.clientX}px`);
+                document.body.style.setProperty("--mouse-y", `${e.clientY}px`);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="HEAD" class="center-left">
+            <h1>Jan Jurka</h1>
+            <p>"If my .bashrc leaks, even the Hague might notice"</p>
+        </div>
+        <div class="repo">Stuff I made</div>
+        <div class="commit" id="wanikani-tui">
+            <h2>
+                <a href="https://github.com/Everesh/WaniKani-TUI"
+                    >WaniKani TUI</a
+                >
+            </h2>
+            <div>
+                <p>
+                    Terminal-based client for the
+                    <a href="https://www.wanikani.com//about"
+                        >WaniKani web app</a
+                    >, built using the curses library.
+                </p>
+                <p>For when you need to do your reviews over SSH</p>
+            </div>
+            <script
+                src="https://asciinema.org/a/62X3qNfa7ZOnVSefpc0R23sHn.js"
+                id="asciicast-62X3qNfa7ZOnVSefpc0R23sHn"
+                async="true"
+                style="margin: 2rem 0 0 0"
+            ></script>
+            <div class="tags">
+                <span>Tags:</span>
+                <div class="tag">Ruby</div>
+                <div class="tag">SQLite</div>
+                <div class="tag">API integration</div>
+                <div class="tag">Test Suit</div>
+            </div>
+        </div>
+    </body>
+</html>
