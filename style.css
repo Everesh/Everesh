@@ -159,6 +159,20 @@ a:visited {
     color: var(--text-visited);
 }
 
+.wrapper {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+    margin: 0 0 1rem 1rem;
+}
+
+.wrapper:first-of-type {
+    margin-top: 1rem;
+}
+
 .commit p {
     font-size: 1.2rem;
     margin: 0 0 1rem 1rem;
