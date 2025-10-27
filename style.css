@@ -171,8 +171,14 @@ a:visited {
 .invert {
     color: var(--surface-2);
     background-color: var(--text);
-    padding: 0.1em 0.5em;
+    padding: 0 0.5em 0.1em 0.5em;
     border-radius: 5px;
+}
+
+.outline {
+    padding: 0 0.5em 0.1em 0.5em;
+    border-radius: 5px;
+    border: 1px solid var(--text);
 }
 
 .commit .tags {
