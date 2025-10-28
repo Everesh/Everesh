@@ -167,11 +167,11 @@ a:visited {
     gap: 1rem;
     justify-content: start;
     align-items: center;
-    margin: 0 0 1rem 1rem;
+    margin: 1.2rem 0 1rem 1rem;
 }
 
 .wrapper:first-of-type {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .commit p {
