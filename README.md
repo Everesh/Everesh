@@ -1,4 +1,4 @@
-# Jan Jurka
+# Hey, I'm Jan
 
 [![Website](https://img.shields.io/badge/Website-282828?style=for-the-badge)](https://everesh.github.io/Everesh/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jan-jurka/)
