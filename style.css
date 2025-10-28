@@ -87,7 +87,8 @@ body::before {
 body:hover::before {
     opacity: 1;
 }
-body:has(.commit:hover)::before {
+body:has(.commit:hover)::before,
+body:has(.checkout:hover)::before {
     opacity: 0;
 }
 
@@ -240,6 +241,49 @@ a:visited {
 
 #socials a {
     margin-bottom: 0.5rem;
+}
+
+.branch {
+    width: clamp(300px, 90%, 80rem);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 1.5rem 0;
+}
+
+.checkout {
+    flex: 1 1 0;
+    min-width: 300px;
+
+    border-radius: 10px;
+    margin: 0;
+    padding: 2rem;
+    z-index: 5;
+    border: 1px solid color-mix(in srgb, var(--surface-2), white 25%);
+    background-color: var(--surface-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.checkout h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0 1rem;
+}
+
+.checkout h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0 1rem 1rem;
+}
+
+.checkout p {
+    font-size: 1.2rem;
+    margin: 0 0 0 1rem;
 }
 
 @media (max-width: 1250px) {
