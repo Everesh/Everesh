@@ -297,3 +297,21 @@ a:visited {
         position: absolute;
     }
 }
+
+.side-decoration {
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--surface-1);
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0.5;
+    font-weight: bold;
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 1400px) {
+    .side-decoration {
+        display: none;
+    }
+}

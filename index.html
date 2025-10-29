@@ -376,5 +376,81 @@
                 alt="Screenshot of the GUI"
             />
         </div>
+        <div id="side-decorations"></div>
+        <script>
+            const container = document.getElementById("side-decorations");
+            const spansPerSide = 12;
+
+            function generateSpans() {
+                container.innerHTML = "";
+
+                const pageHeight = document.body.scrollHeight;
+                const startPosition = window.innerHeight * 1.2;
+                const availableHeight = pageHeight - startPosition;
+                const viewportHeight = window.innerHeight;
+
+                const shitposts = [
+                    "Ask me about my init.lua",
+                    "I use Arch btw",
+                    "systemd is bloat",
+                    "vim > emacs",
+                    "Y tho",
+                    "sudo rm -rf /",
+                    "It works on my machine",
+                    "RTFM",
+                    "No, I will not fix your printer",
+                    "Have you tried turning it off and on again?",
+                    "localhost:3000",
+                    "git push --force",
+                    "TODO: refactor this later",
+                    "// This should work",
+                    "npm install god-complex",
+                    "sudo !!",
+                    "Exit vim? Just reboot lmao",
+                    "My .bashrc has human rights violations",
+                    "chmod 777 everything",
+                    "Works in production, broken in dev",
+                    "I don't need comments, my code is self-documenting",
+                    "Dependencies? Just vendor everything",
+                ];
+
+                const messagesPerTenVh = 2;
+                const totalSpans = Math.floor(
+                    (availableHeight / (viewportHeight * 0.1)) *
+                        messagesPerTenVh,
+                );
+
+                const sectionHeight = availableHeight / totalSpans;
+
+                for (let i = 0; i < totalSpans; i++) {
+                    const span = document.createElement("span");
+                    span.className = "side-decoration";
+                    span.textContent =
+                        shitposts[Math.floor(Math.random() * shitposts.length)];
+
+                    const sectionStart = startPosition + i * sectionHeight;
+                    const randomTop =
+                        sectionStart + Math.random() * sectionHeight;
+
+                    const randomLeft = Math.random() * 100;
+
+                    const randomRotation = Math.random() * 140 - 70; // -70 to +70 degrees
+
+                    span.style.top = `${randomTop}px`;
+                    span.style.left = `${randomLeft}%`;
+                    span.style.transform = `rotate(${randomRotation}deg)`;
+
+                    container.appendChild(span);
+                }
+            }
+
+            window.addEventListener("load", generateSpans);
+
+            let resizeTimeout;
+            window.addEventListener("resize", () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(generateSpans, 250);
+            });
+        </script>
     </body>
 </html>
