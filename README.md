@@ -1,6 +1,6 @@
 # Hey, I'm Jan
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Everesh&stats_format=bytes&langs_count=20&hide=html,dockerfile&layout=compact&theme=github_dark&hide_border=true">
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Everesh&stats_format=bytes&langs_count=20&hide=html,dockerfile&layout=compact&theme=github_dark&border_color=3d444d">
 
 [![Website](https://img.shields.io/badge/Website-282828?style=for-the-badge)](https://everesh.github.io/Everesh/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jan-jurka/)
