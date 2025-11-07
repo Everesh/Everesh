@@ -4,7 +4,6 @@
 
 :root {
     font-family: monospace;
-    color: #fbf1c7;
 
     --surface-1: #202020;
     --surface-2: #282828;
@@ -28,6 +27,7 @@ body {
         100% 100%,
         20px 20px;
 
+    color: var(--text);
     font-size: 1.2rem;
 
     padding: 0;
@@ -50,7 +50,7 @@ body::before {
         transparent 100%
     );
     pointer-events: none;
-    z-index: 3;
+    z-index: 10;
     opacity: 0;
     transform: translate(-50%, -50%);
     left: var(--mouse-x, 50%);
@@ -221,7 +221,8 @@ a:visited {
     opacity: 1;
 }
 
-#socials a {
+#socials a,
+#socials button {
     margin-bottom: 0.5rem;
 }
 
@@ -272,4 +273,54 @@ a:visited {
     #socials {
         position: absolute;
     }
+}
+
+.hidden {
+    color: var(--surface-1);
+    z-index: 15;
+    font-size: 2.5rem;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#theme-toggle {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: var(--text-hl);
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+    text-decoration: underline;
+}
+
+:root.light {
+    --surface-1: #fafafa;
+    --surface-2: #f0f0f0;
+    --surface-3: #e0e0e0;
+
+    --text: #1a1a1a;
+    --text-hl: #0066cc;
+    --text-visited: #551a8b;
+}
+
+:root.light body::before {
+    background: radial-gradient(
+        circle 250px,
+        color-mix(in srgb, var(--text-hl), transparent 95%) 230px,
+        color-mix(in srgb, var(--text-hl), transparent 90%) 249px,
+        transparent 100%
+    );
+}
+
+:root.light .checkout,
+:root.light .commit,
+:root.light .commit .tag {
+    border: 1px solid color-mix(in srgb, var(--surface-2), black 25%);
 }
