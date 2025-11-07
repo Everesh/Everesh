@@ -9,34 +9,10 @@
     --surface-1: #202020;
     --surface-2: #282828;
     --surface-3: #303030;
-    --surface-4: #535353;
-    --surface-inv: #bababa;
 
     --text: #fbf1c7;
-    --text-inv: #151515;
     --text-hl: #ecbe80;
     --text-visited: #c6613f;
-    --text-grayed: #bbbbbb;
-
-    --blue: #56638a;
-    --red: #9c4644;
-    --green: #58896f;
-}
-
-.fg_blue {
-    color: var(--blue);
-}
-
-.fg_red {
-    color: var(--red);
-}
-
-.fg_green {
-    color: var(--green);
-}
-
-.hl {
-    color: var(--text-hl);
 }
 
 body {
