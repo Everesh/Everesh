@@ -84,10 +84,6 @@ body:has(.checkout:hover)::before {
     font-size: 1.5rem;
 }
 
-.small {
-    font-size: 1rem;
-}
-
 .center-left {
     display: flex;
     align-items: start;
@@ -99,6 +95,7 @@ body:has(.checkout:hover)::before {
     width: clamp(300px, 90%, 80rem);
     font-size: 2rem;
     padding: 1rem 0;
+    white-space: nowrap;
 
     margin-top: 4rem;
 
@@ -277,13 +274,14 @@ a:visited {
 
 .hidden {
     color: var(--surface-1);
+    position: relative;
     z-index: 15;
-    font-size: 2.5rem;
     font-weight: bold;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    white-space: nowrap;
 }
 
 #theme-toggle {
