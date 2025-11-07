@@ -4,6 +4,9 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const DARK_LABEL = "[ Theme: Dark  ]";
+  const LIGHT_LABEL = "[ Theme: Light ]";
+
   const themeToggle = document.getElementById("theme-toggle");
   const root = document.documentElement;
 
@@ -13,15 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
   if (initialTheme === "light") {
     root.classList.add("light");
-    themeToggle.textContent = "[ Theme: Dark  ]";
+    themeToggle.textContent = LIGHT_LABEL;
   } else {
-    themeToggle.textContent = "[ Theme: Light ]";
+    themeToggle.textContent = DARK_LABEL;
   }
 
   themeToggle.addEventListener("click", () => {
     root.classList.toggle("light");
     const isLight = root.classList.contains("light");
-    themeToggle.textContent = isLight ? "[ Theme: Dark  ]" : "[ Theme: Light ]";
+    themeToggle.textContent = isLight ? LIGHT_LABEL : DARK_LABEL;
     localStorage.setItem("theme", isLight ? "light" : "dark");
   });
 
@@ -31,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!localStorage.getItem("theme")) {
         if (e.matches) {
           root.classList.remove("light");
-          themeToggle.textContent = "[ Theme: Light ]";
+          themeToggle.textContent = DARK_LABEL;
         } else {
           root.classList.add("light");
-          themeToggle.textContent = "[ Theme: Dark  ]";
+          themeToggle.textContent = LIGHT_LABEL;
         }
       }
     });
