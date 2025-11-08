@@ -211,10 +211,9 @@ a:visited {
     align-items: center;
 }
 
-#socials {
-    position: fixed;
+.top {
     top: 2rem;
-    right: 2rem;
+    position: fixed;
     font-size: 1.2rem;
     opacity: 0.85;
 
@@ -224,12 +223,19 @@ a:visited {
     align-items: end;
 }
 
-#socials:hover {
+#top-right {
+    right: 2rem;
+}
+
+#top-left {
+    left: 2rem;
+}
+
+.top:hover {
     opacity: 1;
 }
 
-#socials a,
-#socials button {
+.top > * {
     margin-bottom: 0.5rem;
 }
 
@@ -277,7 +283,7 @@ a:visited {
 }
 
 @media (max-width: 1250px) {
-    #socials {
+    .top {
         position: absolute;
     }
 }
@@ -296,7 +302,6 @@ a:visited {
 
 #theme-toggle {
     padding: 0;
-    margin: 0;
     border: none;
     background: transparent;
     font-size: 1.2rem;
