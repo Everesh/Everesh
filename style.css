@@ -63,9 +63,17 @@ body::before {
 body:hover::before {
     opacity: 1;
 }
-body:has(.commit:hover)::before,
-body:has(.checkout:hover)::before {
+body:has(.upstream:hover)::before {
     opacity: 0;
+}
+
+.upstream {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #HEAD {
